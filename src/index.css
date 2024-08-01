@@ -2,3 +2,177 @@
 @tailwind components;
 @tailwind utilities;
 
+.carousel-container {
+  padding: 2rem 0;
+}
+
+.carousel-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.carousel-item img {
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.space-x-5 {
+  display: flex;
+  gap: 1.25rem;
+  overflow-y: hidden; /* Prevent vertical overflow */
+}
+
+
+
+.carousel-container {
+  margin-top: 2rem;
+  padding-left: 2rem; /* Add padding to the left side */
+}
+
+.heading {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+  hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .hide-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  /* Reduce padding and margin for headings */
+.heading {
+  margin-bottom: 1rem;
+}
+
+/* Home Page Specific Styling */
+.home-container {
+  max-width: 6xl;
+  margin: 0 auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.home-carousel {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home-container {
+    padding: 1rem;
+  }
+
+  .home-carousel {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .heading h2 {
+    font-size: 1.5rem;
+  }
+}
+
+
+  body {
+    background-color: #f0f2f5;
+  }
+  
+  .movie-details {
+    padding: 2rem;
+  }
+  
+  .movie-details img {
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .movie-details .details {
+    margin-left: 2rem;
+  }
+  
+  .movie-details .details h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .movie-details .details .info {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  
+  .movie-details .details .info .star-icon {
+    color: #ffc107;
+  }
+  
+  .movie-details .details .info .rating {
+    margin-left: 0.5rem;
+    font-size: 1.25rem;
+  }
+  
+  .movie-details .details .info .runtime, .movie-details .details .info .genres, .movie-details .details .info .year {
+    margin-left: 1rem;
+    font-size: 1.25rem;
+  }
+  
+  .movie-details .details .summary {
+    margin-top: 2rem;
+    font-size: 1.25rem;
+  }
+  
+  .movie-details .details .actions {
+    margin-top: 2rem;
+  }
+  
+  .movie-details .details .actions .watch-now, .movie-details .details .actions .add-to-watchlist {
+    margin-right: 1rem;
+  }
+  
+  .movie-details .details .genres {
+    margin-top: 2rem;
+  }
+  
+  .movie-details .details .languages {
+    margin-top: 2rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .movie-details .additional-sections {
+    margin-top: 4rem;
+  }
+  
+  .movie-details .additional-sections h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+  
+  .movie-details .additional-sections .section-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .movie-details .additional-sections .section-content .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .movie-details .additional-sections .section-content .item img {
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
+  }
+  
+  

@@ -1,24 +1,23 @@
-import { useState } from 'react'
-import Navbar from './components/navbar'
-import './index.css'
-import { Box, Heading, Button, Text } from '@chakra-ui/react'
-import Home from './pages/home'
-import Carousel from './containers/carousel'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/navbar';
+import Home from './pages/home';
+import MovieDetails from './pages/movieDetails/MovieDetails';
+import './index.css';
+import { Box } from '@chakra-ui/react';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
+    <Router>
       <Navbar />
-      <Box p={"2rem 0rem"}>
-        <Home />
-        <Carousel category={"thriller"} />
-        <Carousel category={"comedy"} />
-        <Carousel category={"drama"} />
+      <Box p="2rem 0rem">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/movies/:id" element={<MovieDetails />} />
+        </Routes>
       </Box>
-    </>
-  )
+    </Router>
+  );
 }
 
-export default App
+export default App;

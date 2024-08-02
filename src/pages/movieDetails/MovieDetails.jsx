@@ -38,7 +38,7 @@ const MovieDetails = () => {
   }
 
   return (
-    <Box width="100%" p={0} m={0}>
+    <Box width="100%" p={0} m={0} mt={8}>
       <Box position="relative" width="100%" height="700px" mb={8} overflow="hidden">
         <Image 
           src={movie.image?.original} 

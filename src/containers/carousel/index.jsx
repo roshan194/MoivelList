@@ -39,22 +39,22 @@ const Carousel = ({ category }) => {
     }, [category]);
 
     return (
-        <div className='flex flex-col px-[3rem] mb-[2rem]'>
-            <div className='flex items-center gap-5'>
-                <p className='text-[20px] font-normal'>{category.charAt(0).toUpperCase() + category.slice(1)}</p>
-                <Divider className="flex-grow border-gray-300" />
-                <div className='bg-[#5959595E] p-2 flex items-center justify-between rounded-full'>
+        <div className='flex flex-col px-8 mb-8'>
+            <div className='flex items-center gap-5 mb-4'>
+                <p className='text-xl font-normal'>{category.charAt(0).toUpperCase() + category.slice(1)}</p>
+                <Divider className="flex-grow border-white-300" />
+                <div className='p-2 flex items-center justify-between rounded-full'>
                     <FaChevronRight className="cursor-pointer" />
                 </div>
             </div>
             <div className="flex overflow-x-auto space-x-5 p-5 mt-4 hide-scrollbar">
                 {data?.map((item, index) => (
-                    <div key={index} className='flex flex-col gap-5 w-[20%] min-w-[250px]'>
+                    <div key={index} className='flex flex-col gap-5 w-1/5 min-w-[250px]'>
                         <RouterLink to={`/movies/${item.id}`}>
-                            <img src={item?.image?.medium || '/placeholder.png'} className='w-full h-full object-contain rounded-[35px]' alt={item.name} />
+                            <img src={item?.image?.medium || '/placeholder.png'} className='w-full h-full object-cover rounded-[35px]' alt={item.name} />
                         </RouterLink>
-                        <div className='bg-[#565656] rounded-[35px] flex items-center justify-center'>
-                            <p className='text-white text-[20px] px-[1rem] py-[1rem] truncate'>{item?.name}</p>
+                        <div className='bg-gray-700 rounded-[35px] flex items-center justify-center'>
+                            <p className='text-white text-lg px-4 py-4 truncate'>{item?.name}</p>
                         </div>
                     </div>
                 ))}

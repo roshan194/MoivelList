@@ -41,36 +41,3 @@
   color: #888;
 }
 
-/* index.css or App.css */
-.carousel-container {
-  padding: 2rem 0;
-}
-
-.carousel-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-}
-
-.carousel-item img {
-  border-radius: 10px;
-  height: 100%;
-  object-fit: cover;
-}
-
-.space-x-5 {
-  display: flex;
-  gap: 1.25rem;
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-.hide-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-.hide-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}

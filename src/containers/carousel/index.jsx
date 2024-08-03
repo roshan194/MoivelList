@@ -41,7 +41,7 @@ const Carousel = ({ category }) => {
     return (
         <div className='flex flex-col px-8 mb-8'>
             <div className='flex items-center gap-5 mb-4'>
-                <p className='text-xl font-normal'>{category.charAt(0).toUpperCase() + category.slice(1)}</p>
+                <p style={{fontWeight: "400", fontSize: "20px", color :"#000000"}}>{category.charAt(0).toUpperCase() + category.slice(1)}</p>
                 <Divider className="flex-grow border-white-300" />
                 <div className='p-2 flex items-center justify-between rounded-full'>
                     <FaChevronRight className="cursor-pointer" />

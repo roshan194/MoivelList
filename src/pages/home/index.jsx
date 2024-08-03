@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Carousel from '../../containers/carousel';
 
 const Home = () => {
@@ -11,12 +11,12 @@ const Home = () => {
           <div className='text-[40px] font-medium mb-8 text-[#565656]'>Enjoy Watching</div>
           <div className='mx-[3rem]'>
             <div className="text-center">
-              <p className="mt-4 text-lg text-black font-medium px-[3rem] content-text">
+              <p className="mt-4 text-lg text-black font-medium px-[10%] content-text">
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerc.
               </p>
             </div>
             <div className="text-center">
-              <p className="mt-4 text-lg text-black font-medium mx-[3rem] content-text">
+              <p className="mt-4 text-lg text-black font-medium mx-[10%] content-text">
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerc.
               </p>
             </div>

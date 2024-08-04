@@ -52,24 +52,4 @@ Movie Details: Click on a movie to view detailed information.
 # Movie Details
 Displays the movie title, description, release year, available languages, ratings, and genres.
 Responsive design ensures a great user experience on both mobile and desktop devices.
-# Project Structure
-├── public
-│   ├── index.html
-│   └── ...
-├── src
-│   ├── components
-│   │   ├── Navbar.js
-│   │   ├── SearchBar.js
-│   │   ├── SignUpModal.js
-│   │   └── ...
-│   ├── pages
-│   │   ├── Home.js
-│   │   ├── MovieDetails.js
-│   │   └── ...
-│   ├── App.js
-│   ├── index.js
-│   └── ...
-├── .gitignore
-├── package.json
-├── README.md
-└── ...
+

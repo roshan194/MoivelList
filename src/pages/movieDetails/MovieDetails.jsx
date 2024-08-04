@@ -66,9 +66,12 @@ const MovieDetails = () => {
         <Box
           position="absolute"
           top="20%"
-          left="5%"
-          width="40%"
+          left="12%"
+          width="100%"
           color="black"
+          display={"flex"}
+          flexDir={"column"}
+          gap={"25px"}
         >
           <Text
             fontFamily="Lato"
@@ -83,7 +86,8 @@ const MovieDetails = () => {
             mt={4}
             fontSize="lg"
             fontWeight="medium"
-            px="10%"
+            // padd'80ingRight={"0"}
+            width={"80%"}
           >
             {movie.summary.replace(/<[^>]*>?/gm, "")}
           </Text>
@@ -112,32 +116,28 @@ const MovieDetails = () => {
       </Box>
 
       <Box
-        width="1362px"
-        backgroundColor="white"
-        borderRadius="12px 0px 0px 0px"
-        p="50px 0px 0px 0px"
-        gap="20px"
-        opacity="1"
-        boxShadow="lg"
-        mx="auto"
-        mt={8}
+        width="100%"
+        display={"flex"}
+        flexDir={"column"}
+        padding={"3rem"}
+        gap={"2rem"}
       >
         <Box
-          width="1262px"
-          backgroundColor="#f9f9f9"
-          borderRadius="md"
-          p={6}
-          opacity="1"
-          mx="auto"
+          width="100%"
+          backgroundColor="#1A1A1A0F"
+          borderRadius="16px"
+          p={"50px"}
+          //   opacity="1"
+          //   mx="auto"
+          // >
         >
           <Text
             fontSize="18px"
             fontWeight="500"
             lineHeight="27px"
-            fontFamily="Manrope"
+            color={"#999999"}
             textAlign="left"
             width="100%"
-            height="27px"
             gap="0px"
             opacity="1"
             mb={4}
@@ -146,10 +146,9 @@ const MovieDetails = () => {
           </Text>
           <Text
             width="100%"
-            height="81px"
             gap="0px"
             opacity="1"
-            fontFamily="Manrope"
+            color={"#595959"}
             fontSize="18px"
             fontWeight="500"
             lineHeight="27px"
@@ -161,142 +160,160 @@ const MovieDetails = () => {
         </Box>
 
         <Box
-          width="1262px"
-          backgroundColor="#f9f9f9"
-          borderRadius="12px 0px 0px 0px"
-          p="50px 0px 0px 0px"
-          gap="30px"
-          opacity="1"
-          boxShadow="lg"
-          mt={8}
-          mx="auto"
+          width="100%"
+          backgroundColor="#1A1A1A0F"
+          borderRadius="16px"
+          p={"50px"}
         >
           <Grid templateColumns="repeat(2, 1fr)" gap={6} px={6}>
             <GridItem colSpan={2}>
               <Box
-                backgroundColor="#f9f9f9"
-                borderRadius="md"
-                p={6}
-                opacity="1"
-                boxShadow="sm"
-                mx="auto"
+              // backgroundColor="#f9f9f9"
+              // borderRadius="md"
+              // p={6}
+              // opacity="1"
+              // boxShadow="sm"
+              // mx="auto"'
               >
-                <Flex align="center" mb={2} width="100%" height="27px" gap="4px" opacity="1">
-                  <Icon as={FaCalendarAlt} boxSize={5} mr={2} />
-                  <Text fontSize="18px" fontWeight="500" lineHeight="27px" fontFamily="Manrope" textAlign="left">
+                <Flex
+                  align="center"
+                  mb={2}
+                  width="100%"
+                  // height="27px"
+                  gap="8px"
+                  opacity="1"
+                >
+                  <img src="/calendar.svg" width={"18px"} height={"18px"} />
+                  <Text
+                    fontSize="16px"
+                    fontWeight="500"
+                    lineHeight="27px"
+                    textAlign="left"
+                    color={"#999999"}
+                  >
                     Released Year
                   </Text>
                 </Flex>
-                <Text fontWeight="light">{movie.premiered.split("-")[0]}</Text>
+                <Text fontWeight={600} fontSize={"18px"} color={"#5B5B5B"}>
+                  {movie.premiered.split("-")[0]}
+                </Text>
               </Box>
             </GridItem>
             <GridItem colSpan={2}>
-              <Box
-                backgroundColor="#f9f9f9"
-                borderRadius="md"
-                p={6}
-                opacity="1"
-                boxShadow="sm"
-                mx="auto"
-              >
-                <Flex align="center" mb={2} width="100%" height="84px" gap="14px" opacity="1">
-                  <Icon as={FaLanguage} boxSize={5} mr={2} />
-                  <Text fontSize="18px" fontWeight="500" lineHeight="27px" fontFamily="Manrope" textAlign="left">
+              <Box display={"flex"} flexDir={"column"} gap={"14px"}>
+                <Flex
+                  align="center"
+                  mb={2}
+                  width="100%"
+                  // height="84px"
+                  gap="8px"
+                  opacity="1"
+                >
+                  <img src="/language.svg" width={"18px"} height={"18px"} />
+                  <Text
+                    fontSize="16px"
+                    fontWeight="500"
+                    lineHeight="27px"
+                    textAlign="left"
+                    color={"#999999"}
+                  >
                     Available Languages
                   </Text>
                 </Flex>
-                <Flex wrap="wrap" width="100%" height="43px" gap="10px" opacity="1">
-                  {["English", "Hindi", "Tamil", "Telugu", "Kannada"].map((language) => (
-                    <Box
-                      key={language}
-                      width="90px"
-                      height="43px"
-                      padding="8px 14px"
-                      gap="10px"
-                      borderRadius="8px"
-                      border="1px solid transparent"
-                      opacity="1"
-                      background="#141414"
-                    >
-                      <Text
-                        fontFamily="Manrope"
-                        fontSize="18px"
-                        fontWeight="500"
-                        lineHeight="27px"
-                        textAlign="left"
-                        color="#FFFFFF"
+                <Flex wrap="wrap" width="100%" gap="10px">
+                  {["English", "Hindi", "Tamil", "Telugu", "Kannada"].map(
+                    (language) => (
+                      <Box
+                        key={language}
+                        // width="90px"
+                        padding="8px 14px"
+                        gap="10px"
+                        borderRadius="8px"
+                        border="1px solid transparent"
+                        fontWeight={"500"}
+                        background="#141414"
                       >
-                        {language}
-                      </Text>
-                    </Box>
-                  ))}
+                        <Text
+                          fontSize={"16px"}
+                          fontWeight="500"
+                          lineHeight="27px"
+                          textAlign="left"
+                          color="#FFFFFF"
+                        >
+                          {language}
+                        </Text>
+                      </Box>
+                    )
+                  )}
                 </Flex>
               </Box>
             </GridItem>
             <GridItem colSpan={2}>
-              <Box
-                backgroundColor="#f9f9f9"
-                borderRadius="md"
-                p={6}
-                opacity="1"
-                boxShadow="sm"
-                mx="auto"
-              >
-                <Flex align="center" mb={2} width="100%" height="137px" gap="14px" opacity="1">
-                  <Text fontSize="18px" fontWeight="500" lineHeight="27px" fontFamily="Manrope" textAlign="left">
+              <Box>
+                <Flex
+                  align="center"
+                  mb={2}
+                  width="100%"
+                  // height="84px"
+                  gap="8px"
+                  opacity="1"
+                >
+                  <img src="/star.svg" width={"18px"} height={"18px"} />
+                  <Text
+                    fontSize="16px"
+                    fontWeight="500"
+                    lineHeight="27px"
+                    textAlign="left"
+                    color={"#999999"}
+                  >
                     Ratings
                   </Text>
                 </Flex>
                 <Box width="100%" height="96px" gap="20px" opacity="1">
-                  <Flex gap="20px"> {/* Add gap between IMDb and Streamvibe containers */}
+                  <Flex gap="20px">
+                    {" "}
                     <Box
-                      width="621px"
-                      height="96px"
-                      padding="16px 0px 0px 0px"
+                      width="50%"
                       gap="4px"
-                      borderRadius="8px 0px 0px 0px"
+                      borderRadius="8px"
                       opacity="1"
-                      backgroundColor="#e5e5e5"
-                      p={4}
+                      backgroundColor="#D4D4D4"
+                      p={"16px"}
                     >
                       <Text
-                        fontFamily="Manrope"
-                        fontSize="20px"
+                        fontSize="18px"
                         fontWeight="600"
                         lineHeight="30px"
                         textAlign="left"
                       >
                         IMDb
                       </Text>
-                      <Flex align="center">
+                      <Flex align="center" gap={"4px"}>
                         <Icon as={StarIcon} color="yellow.400" />
-                        <Text ml={2} fontWeight="light">
+                        <Text ml={2} fontWeight="500" color={"#FFFFFF"}>
                           {movie.rating.average ? movie.rating.average : "N/A"}
                         </Text>
                       </Flex>
                     </Box>
                     <Box
-                      width="621px"
-                      height="96px"
-                      padding="16px 0px 0px 0px"
+                      width="50%"
                       gap="4px"
-                      borderRadius="8px 0px 0px 0px"
+                      borderRadius="8px"
                       opacity="1"
-                      backgroundColor="#e5e5e5"
-                      p={4}
+                      backgroundColor="#D4D4D4"
+                      p={"16px"}
                     >
                       <Text
-                        fontFamily="Manrope"
-                        fontSize="20px"
+                        fontSize="18px"
                         fontWeight="600"
                         lineHeight="30px"
                         textAlign="left"
                       >
                         Streamvibe
                       </Text>
-                      <Flex align="center">
+                      <Flex align="center" gap={"4px"}>
                         <Icon as={StarIcon} color="red.400" />
-                        <Text ml={2} fontWeight="light">
+                        <Text fontWeight="500" color={"#FFFFFF"}>
                           4
                         </Text>
                       </Flex>
@@ -307,25 +324,32 @@ const MovieDetails = () => {
             </GridItem>
             <GridItem colSpan={2}>
               <Box
-                backgroundColor="#f9f9f9"
-                borderRadius="md"
-                p={6}
-                opacity="1"
-                boxShadow="sm"
-                mx="auto"
+              // backgroundColor="#f9f9f9"
+              // borderRadius="md"
+              // p={6}
+              // opacity="1"
+              // boxShadow="sm"
+              // mx="auto"
               >
-                <Flex align="center" mb={2} width="100%" height="84px" gap="14px" opacity="1">
-                  <Icon as={MdCategory} boxSize={6} mr={2} />
-                  <Text fontSize="18px" fontWeight="500" lineHeight="27px" fontFamily="Manrope" textAlign="left">
+                <Flex align="center" mb={2} width="100%" gap="8px">
+                  <img src="/app.svg" width={"18px"} height={"18px"} />
+                  <Text
+                    fontSize="16px"
+                    fontWeight="500"
+                    lineHeight="27px"
+                    textAlign="left"
+                    color={"#999999"}
+                  >
                     Genres
                   </Text>
                 </Flex>
-                <Flex wrap="wrap" width="100%" height="43px" gap="10px" opacity="1">
+                <Flex
+                  wrap="wrap"
+                  gap="10px"
+                >
                   {movie.genres.map((genre, index) => (
                     <Box
                       key={index}
-                      width="84px"
-                      height="43px"
                       padding="8px 14px"
                       gap="10px"
                       borderRadius="8px"
@@ -334,8 +358,7 @@ const MovieDetails = () => {
                       background="#141414"
                     >
                       <Text
-                        fontFamily="Manrope"
-                        fontSize="18px"
+                        fontSize={"16px"}
                         fontWeight="500"
                         lineHeight="27px"
                         textAlign="left"

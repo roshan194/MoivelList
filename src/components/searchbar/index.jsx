@@ -47,7 +47,7 @@ const SearchBar = () => {
           onClick={handleSearchClick}
           onChange={handleSearchChange}
         />
-        <SearchIcon color={"#cccccc"} width={"20px"} height={"20px"} />
+        <img src="/search.svg" width="20px" height={"20px"} />
       </div>
       {isOpen && (
         <ul className="dropdown">
@@ -66,17 +66,13 @@ const SearchBar = () => {
                 <div
                   style={{ display: "flex", alignItems: "center", gap: "14px" }}
                 >
-                  <SearchIcon
-                    color={"#cccccc"}
-                    width={"20px"}
-                    height={"20px"}
-                  />
-                  <Text fontWeight={600} lineHeight={"24px"} fontSize={"16px"}>
+                  <img src="/search.svg" width="20px" height={"20px"} />
+                  <Text fontWeight={600} lineHeight={"24px"} fontSize={"14px"}>
                     {" "}
                     {search}
                   </Text>
                 </div>
-                <SmallCloseIcon />
+                <img src="/cross.svg" width="20px" height={"20px"} />
               </div>
             </>
           ))}

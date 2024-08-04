@@ -1,8 +1,75 @@
-# React + Vite
+# Movie Streamer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Movie Streamer is a web application that allows users to browse and view details about various movies. The application is built using React and Chakra UI, and it fetches movie data from the TVmaze API.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Demo](#demo)
+- [Features](#features)
+- [Technologies](#technologies)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Demo
+
+You can view a live demo of the application [here](https://moivel-list.vercel.app/).
+
+## Features
+
+- Browse a list of movies
+- View detailed information about each movie
+- Responsive design for mobile and desktop views
+- Smooth animations and transitions
+- Search functionality for finding specific movies
+
+## Technologies
+
+- React
+- Chakra UI
+- Axios
+- React Router
+
+## Installation
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-username/movie-streamer.git
+   cd movie-streamer
+2. Install the dependencies:
+   npm install
+3. Start the development server:
+   npm start
+The application will be available at http://localhost:3000.
+
+# Usage
+# Navigation
+Home: Displays a list of movies.
+Search: Use the search bar to find specific movies.
+Movie Details: Click on a movie to view detailed information.
+# Movie Details
+Displays the movie title, description, release year, available languages, ratings, and genres.
+Responsive design ensures a great user experience on both mobile and desktop devices.
+# Project Structure
+├── public
+│   ├── index.html
+│   └── ...
+├── src
+│   ├── components
+│   │   ├── Navbar.js
+│   │   ├── SearchBar.js
+│   │   ├── SignUpModal.js
+│   │   └── ...
+│   ├── pages
+│   │   ├── Home.js
+│   │   ├── MovieDetails.js
+│   │   └── ...
+│   ├── App.js
+│   ├── index.js
+│   └── ...
+├── .gitignore
+├── package.json
+├── README.md
+└── ...

@@ -7,11 +7,11 @@ const SearchBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [recentSearches, setRecentSearches] = useState([
-    "React",
-    "JavaScript",
-    "CSS",
-    "HTML",
-    "Node.js",
+    "Breaking Bad",
+    "Game of Thrones",
+    "The Boys",
+    " Daredevil",
+    "Dark",
   ]);
 
   const searchRef = useRef(null);

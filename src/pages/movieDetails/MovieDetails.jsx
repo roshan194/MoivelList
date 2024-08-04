@@ -107,7 +107,7 @@ const MovieDetails = () => {
               textAlign="left"
               borderRadius="35px"
               opacity="1"
-              _hover={{ bg: "gray.800" }}
+              _hover={{ backgroundColor: "grey" }}
             >
               Play Now
             </Button>

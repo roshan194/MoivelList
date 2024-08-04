@@ -71,7 +71,7 @@ const Carousel = ({ category }) => {
                 alt={item.name}
               />
             </RouterLink>
-            <div className="bg-gray-700 rounded-[35px] flex items-center justify-center">
+            <div className="bg-gray-700 rounded-[35px] flex items-center justify-center hover:bg-black">
               <p className="text-white text-lg px-4 py-4 truncate">
                 {item?.name}
               </p>

@@ -9,9 +9,6 @@ Movie Streamer is a web application that allows users to browse and view details
 - [Technologies](#technologies)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Project Structure](#project-structure)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Demo
 

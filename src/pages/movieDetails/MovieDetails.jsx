@@ -4,17 +4,14 @@ import {
   Text,
   Button,
   Flex,
-  Badge,
-  Icon,
   Spinner,
   Grid,
   GridItem,
+  Icon,
 } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { StarIcon } from "@chakra-ui/icons";
-import { FaCalendarAlt, FaLanguage } from "react-icons/fa";
-import { MdCategory } from "react-icons/md";
 
 const MovieDetails = () => {
   const { id } = useParams();
@@ -79,7 +76,7 @@ const MovieDetails = () => {
         >
           <Text
             fontFamily="Lato"
-            fontSize="60px"
+            className="text-[40px] md:text-[60px]"
             fontWeight="600"
             letterSpacing="0.015em"
             textAlign="left"
@@ -88,7 +85,7 @@ const MovieDetails = () => {
           </Text>
           <Text
             mt={4}
-            fontSize="lg"
+            className="text-base md:text-lg"
             fontWeight="medium"
             width={"80%"}
           >
@@ -103,7 +100,7 @@ const MovieDetails = () => {
               backgroundColor="black"
               color="white"
               fontFamily="Lato"
-              fontSize="22px"
+              className="text-[16px] md:text-[22px]"
               fontWeight="700"
               lineHeight="32.89px"
               letterSpacing="0.015em"
@@ -132,7 +129,7 @@ const MovieDetails = () => {
           p={"50px"}
         >
           <Text
-            fontSize="18px"
+            className="text-base md:text-lg"
             fontWeight="500"
             lineHeight="27px"
             color={"#999999"}
@@ -145,11 +142,11 @@ const MovieDetails = () => {
             Description
           </Text>
           <Text
+            className="text-sm md:text-base"
             width="100%"
             gap="0px"
             opacity="1"
             color={"#595959"}
-            fontSize="18px"
             fontWeight="500"
             lineHeight="27px"
             textAlign="left"
@@ -175,9 +172,9 @@ const MovieDetails = () => {
                   gap="8px"
                   opacity="1"
                 >
-                  <img src="/calendar.svg" width={"18px"} height={"18px"} />
+                  <img src="/calendar.svg" width={"18px"} height={"18px"} alt="Calendar" />
                   <Text
-                    fontSize="16px"
+                    className="text-base md:text-lg"
                     fontWeight="500"
                     lineHeight="27px"
                     textAlign="left"
@@ -186,7 +183,7 @@ const MovieDetails = () => {
                     Released Year
                   </Text>
                 </Flex>
-                <Text fontWeight={600} fontSize={"18px"} color={"#5B5B5B"}>
+                <Text fontWeight={600} className="text-sm md:text-base" color={"#5B5B5B"}>
                   {movie.premiered.split("-")[0]}
                 </Text>
               </Box>
@@ -200,9 +197,9 @@ const MovieDetails = () => {
                   gap="8px"
                   opacity="1"
                 >
-                  <img src="/language.svg" width={"18px"} height={"18px"} />
+                  <img src="/language.svg" width={"18px"} height={"18px"} alt="Language" />
                   <Text
-                    fontSize="16px"
+                    className="text-base md:text-lg"
                     fontWeight="500"
                     lineHeight="27px"
                     textAlign="left"
@@ -224,7 +221,7 @@ const MovieDetails = () => {
                         background="#141414"
                       >
                         <Text
-                          fontSize={"16px"}
+                          className="text-sm md:text-base"
                           fontWeight="500"
                           lineHeight="27px"
                           textAlign="left"
@@ -247,9 +244,9 @@ const MovieDetails = () => {
                   gap="8px"
                   opacity="1"
                 >
-                  <img src="/star.svg" width={"18px"} height={"18px"} />
+                  <img src="/star.svg" width={"18px"} height={"18px"} alt="Star" />
                   <Text
-                    fontSize="16px"
+                    className="text-base md:text-lg"
                     fontWeight="500"
                     lineHeight="27px"
                     textAlign="left"
@@ -269,7 +266,7 @@ const MovieDetails = () => {
                       p={"16px"}
                     >
                       <Text
-                        fontSize="18px"
+                        className="text-base md:text-lg"
                         fontWeight="600"
                         lineHeight="30px"
                         textAlign="left"
@@ -292,7 +289,7 @@ const MovieDetails = () => {
                       p={"16px"}
                     >
                       <Text
-                        fontSize="18px"
+                        className="text-base md:text-lg"
                         fontWeight="600"
                         lineHeight="30px"
                         textAlign="left"
@@ -313,9 +310,9 @@ const MovieDetails = () => {
             <GridItem colSpan={2}>
               <Box>
                 <Flex align="center" mb={2} width="100%" gap="8px">
-                  <img src="/app.svg" width={"18px"} height={"18px"} />
+                  <img src="/app.svg" width={"18px"} height={"18px"} alt="Category" />
                   <Text
-                    fontSize="16px"
+                    className="text-base md:text-lg"
                     fontWeight="500"
                     lineHeight="27px"
                     textAlign="left"
@@ -336,7 +333,7 @@ const MovieDetails = () => {
                       background="#141414"
                     >
                       <Text
-                        fontSize={"16px"}
+                        className="text-sm md:text-base"
                         fontWeight="500"
                         lineHeight="27px"
                         textAlign="left"

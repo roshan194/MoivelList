@@ -35,6 +35,10 @@ const MovieDetails = () => {
     fetchMovie();
   }, [id]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   if (loading) {
     return (
       <Flex justify="center" align="center" height="100vh">
@@ -86,7 +90,6 @@ const MovieDetails = () => {
             mt={4}
             fontSize="lg"
             fontWeight="medium"
-            // padd'80ingRight={"0"}
             width={"80%"}
           >
             {movie.summary.replace(/<[^>]*>?/gm, "")}
@@ -127,9 +130,6 @@ const MovieDetails = () => {
           backgroundColor="#1A1A1A0F"
           borderRadius="16px"
           p={"50px"}
-          //   opacity="1"
-          //   mx="auto"
-          // >
         >
           <Text
             fontSize="18px"
@@ -167,19 +167,11 @@ const MovieDetails = () => {
         >
           <Grid templateColumns="repeat(2, 1fr)" gap={6} px={6}>
             <GridItem colSpan={2}>
-              <Box
-              // backgroundColor="#f9f9f9"
-              // borderRadius="md"
-              // p={6}
-              // opacity="1"
-              // boxShadow="sm"
-              // mx="auto"'
-              >
+              <Box>
                 <Flex
                   align="center"
                   mb={2}
                   width="100%"
-                  // height="27px"
                   gap="8px"
                   opacity="1"
                 >
@@ -205,7 +197,6 @@ const MovieDetails = () => {
                   align="center"
                   mb={2}
                   width="100%"
-                  // height="84px"
                   gap="8px"
                   opacity="1"
                 >
@@ -225,7 +216,6 @@ const MovieDetails = () => {
                     (language) => (
                       <Box
                         key={language}
-                        // width="90px"
                         padding="8px 14px"
                         gap="10px"
                         borderRadius="8px"
@@ -254,7 +244,6 @@ const MovieDetails = () => {
                   align="center"
                   mb={2}
                   width="100%"
-                  // height="84px"
                   gap="8px"
                   opacity="1"
                 >
@@ -271,7 +260,6 @@ const MovieDetails = () => {
                 </Flex>
                 <Box width="100%" height="96px" gap="20px" opacity="1">
                   <Flex gap="20px">
-                    {" "}
                     <Box
                       width="50%"
                       gap="4px"
@@ -323,14 +311,7 @@ const MovieDetails = () => {
               </Box>
             </GridItem>
             <GridItem colSpan={2}>
-              <Box
-              // backgroundColor="#f9f9f9"
-              // borderRadius="md"
-              // p={6}
-              // opacity="1"
-              // boxShadow="sm"
-              // mx="auto"
-              >
+              <Box>
                 <Flex align="center" mb={2} width="100%" gap="8px">
                   <img src="/app.svg" width={"18px"} height={"18px"} />
                   <Text
@@ -343,10 +324,7 @@ const MovieDetails = () => {
                     Genres
                   </Text>
                 </Flex>
-                <Flex
-                  wrap="wrap"
-                  gap="10px"
-                >
+                <Flex wrap="wrap" gap="10px">
                   {movie.genres.map((genre, index) => (
                     <Box
                       key={index}
